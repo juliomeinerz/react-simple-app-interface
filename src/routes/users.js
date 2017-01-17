@@ -1,25 +1,23 @@
 import React,{Component} from 'react';
 
 import DataTable from '../components/data-table';
+import NewUserInput from '../components/new-user-input';
 
-let userNames = ['julio', 'gabriela','camila'];
-let userMails = ['julio.meinerz@live.com', 'gabrieladefant12@gmail.com', 'camilameinerz@gmail.com'];
-let userPhones = ['92144773', '92643640', '98716187'];
-
-
+export const users = [
+  {name: 'Julio', mail: 'julio.meinerz@live.com', phone: '92144773', country: 'Brazil'},
+  {name: 'Gabriela', mail: 'gabrieladefant12@gmail.com', phone: '92643640', country: 'Brazil'},
+  {name: 'Camila', mail: 'camilaiuahduia@gmail.com', phone: '87361361', country: 'Brazil'},
+  {name: 'Bruno', mail: 'bruno@gmail.com', phone:'16387167', country: 'Armenia'}
+]
 
 class Users extends Component {
   render() {
     return (
       <div>
-        <DataTable names={userNames} mails={userMails} phones={userPhones} />
+        <DataTable users={users} />
+        <NewUserInput users={users} />
       </div>
     )
   }
 }
-
-
-
-
-
 export default Users;
